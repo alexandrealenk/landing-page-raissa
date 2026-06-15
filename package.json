@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
@@ -10,6 +11,13 @@
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
   },
+  "scripts": {
+  "start": "npm run dev",
+  "build": "vite build", 
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+
   "dependencies": {
     "@google/genai": "^1.29.0",
     "@tailwindcss/vite": "^4.1.14",
